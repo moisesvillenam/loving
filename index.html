@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te amo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background-white">
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Por favor, ingresa la contraseña de 4 dígitos:</h2>
+      <input type="password" id="passwordInput">
+      <button onclick="checkPassword()">Ingresar</button>
+    </div>
+  </div>
+  
+  <div class="content-container" id="contentContainer" style="display: none;">
+    <div class="time-counter" id="timeCounter"></div>
+    <div class="photo-album" id="photoAlbum"></div>
+  </div>
+  <div id="content"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

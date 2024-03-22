@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpeg');
+    background-size: cover;
+  }
+  
+  .login-container {
+    position: relative;
+    height: 100vh;
+  }
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-box input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .login-box button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .content-container {
+    text-align: center;
+  }
+  
+  .image-sequence {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-wrapper {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .time-counter {
+    margin-bottom: 20px;
+  }
+/* Estilos para el álbum de fotos */
+.photo-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.photo {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+.photo p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+.background-white {
+  background-color: #fff; /* Color de fondo blanco */
+}
+.white-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  z-index: -1; /* Asegura que esté detrás de otros elementos */
+}
+/* Estilos generales que se aplican a todos los dispositivos */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  /* Agrega tus estilos específicos para dispositivos móviles aquí */
+  .login-box {
+    padding: 10px;
+  }
+}
+.time-counter {
+  font-size: 32px; /* Cambia el tamaño del texto */
+  color: #780aee; /* Cambia el color del texto */
+  text-shadow: 
+    -1px -1px 0 rgb(255, 255, 255),  
+    1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255),
+    1px 1px 0 rgb(255, 255, 255); /* Define múltiples sombras para simular un borde */
+}
+.photo p {
+  font-family: 'Verdana', sans-serif; /* Cambia la fuente del texto */
+  font-size: 24px; /* Tamaño de fuente */
+  color: white; /* Color del texto */
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Define múltiples sombras para simular un borde */
+}
+.background-gradient {
+  background: linear-gradient(to bottom, #ff6f61, #ffcc5c); /* Degradado de rojo a amarillo */
+}
+.photo {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Aumenta la duración de la transición */
+}
+.photo.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+.photo-description {
+  font-family: 'Verdana', sans-serif; /* Cambia la fuente según tu preferencia */
+  font-size: 16px; /* Tamaño de fuente */
+  color: #780aee; /* Color del texto */
+  /* Otros estilos opcionales, como margen, relleno, etc. */
+}
+.photo {
+  border: 2px solid #dd06e8; /* Borde de 2 píxeles de ancho, sólido y de color gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.photo img {
+  width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
+  height: auto; /* Mantiene la relación de aspecto original */
+}
+
+#videoBG {
+  position: fixed ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ajusta según sea necesario */
+}
+
