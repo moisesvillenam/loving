@@ -64,6 +64,7 @@ function startCounter() {
   }, 1000);
 }
 
+
 function loadPhotoAlbum() {
   // Cargar datos del archivo JSON
   fetch('photos.json')
