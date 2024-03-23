@@ -53,16 +53,37 @@ function startCounter() {
   var startDate = new Date("September 23, 2021 00:00:00");
   setInterval(function() {
     var currentTime = new Date();
-    var timeDifference = currentTime - startDate;
-    var years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
-    var months = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30.44));
-    var days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    var years = currentTime.getFullYear() - startDate.getFullYear();
+    var months = currentTime.getMonth() - startDate.getMonth();
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    var days = currentTime.getDate() - startDate.getDate();
+    if (days < 0) {
+      months--;
+      var tempDate = new Date(currentTime.getFullYear(), currentTime.getMonth(), 0);
+      days += tempDate.getDate();
+    }
+    var hours = currentTime.getHours() - startDate.getHours();
+    if (hours < 0) {
+      days--;
+      hours += 24;
+    }
+    var minutes = currentTime.getMinutes() - startDate.getMinutes();
+    if (minutes < 0) {
+      hours--;
+      minutes += 60;
+    }
+    var seconds = currentTime.getSeconds() - startDate.getSeconds();
+    if (seconds < 0) {
+      minutes--;
+      seconds += 60;
+    }
     document.getElementById("timeCounter").innerText = "Llevamos juntos: " + years + " años, " + months + " meses, " + days + " días, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos";
   }, 1000);
 }
+
 
 
 function loadPhotoAlbum() {
